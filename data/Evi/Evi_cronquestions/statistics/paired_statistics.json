@@ -1,0 +1,46 @@
+{
+  "candidate_representation": "lazy_candidate_descriptor_v1",
+  "fact_catalog_sha256": "b773f40e83000cd58c83428ff7abb052940de4bc2b3e86aac5cc925abf8d1ceb",
+  "fact_reference": "dense_uint32_index",
+  "lazy_descriptor_rows": 327047,
+  "mode_eligible_by_split": {
+    "clean": {
+      "dev": 24662,
+      "test": 24543,
+      "train": 277842
+    },
+    "distractor_only": {
+      "dev": 24662,
+      "test": 24538,
+      "train": 277771
+    },
+    "full": {
+      "dev": 1674,
+      "test": 1691,
+      "train": 20204
+    },
+    "substitute_only": {
+      "dev": 1674,
+      "test": 1696,
+      "train": 20275
+    }
+  },
+  "mode_eligible_question_counts": {
+    "clean": 327047,
+    "distractor_only": 326971,
+    "full": 23569,
+    "substitute_only": 23645
+  },
+  "paired_id_uniqueness_verified": true,
+  "paired_question_count": 327047,
+  "primary_four_way_cohort": "cohorts/four_way_common.jsonl",
+  "primary_four_way_count": 23569,
+  "runtime_views": [
+    "clean",
+    "substitute_only",
+    "distractor_only",
+    "full"
+  ],
+  "stored_neutral_fact_ids": 0,
+  "stored_pool_representations": 1
+}

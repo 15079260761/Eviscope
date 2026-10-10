@@ -1,0 +1,135 @@
+{
+  "archive_path": "../data/ICEWS.zip",
+  "candidate_pool": {
+    "size": 1000
+  },
+  "construction_seed": 20260923,
+  "dataset": "icews_actor",
+  "encoder_revision": "1.0.0:dim=4096:corpus=f122f027755c1aa9",
+  "evaluation": {
+    "bs_tau": 0.349259,
+    "k_values": [
+      1,
+      10
+    ],
+    "matching": "max_weight_one_to_one",
+    "metrics": [
+      "hits_at_k",
+      "bs_at_k",
+      "coverage_at_k"
+    ],
+    "rank_discount": "none"
+  },
+  "evidence_scoring": {
+    "distractor_top_levels": {
+      "confusable": [
+        "entity_confusable",
+        "relation_confusable",
+        "temporal_confusable",
+        "boundary_confusable",
+        "multi_hop_shortcut"
+      ],
+      "contradictory": [
+        "negation_conflict",
+        "entity_conflict",
+        "relation_conflict",
+        "time_conflict",
+        "answer_conflict"
+      ]
+    },
+    "negation_markers": [
+      "did not",
+      "never",
+      "no longer",
+      "ceased",
+      "not"
+    ],
+    "relation_scores": {
+      "equivalence_table": 0.9,
+      "identical": 1.0,
+      "inverse_table": 0.8,
+      "otherwise": 0.0
+    },
+    "substitutability": {
+      "alpha": 0.5,
+      "beta": 0.25,
+      "gamma": 0.25,
+      "tau_eq": "fit_on_train:median_sub_score_over_valid_gated_candidates",
+      "tau_min": "same_as_tau_eq",
+      "tau_sim": "fit_on_train:median_candidate_max_semantic_similarity"
+    },
+    "tau_eq": 0.548842,
+    "tau_min": 0.548842,
+    "tau_sim": 0.312181,
+    "valid_gate_checks": [
+      "negation_consistency",
+      "core_entity_consistency",
+      "subject_object_role",
+      "relation_logic",
+      "temporal_operator",
+      "answer_type",
+      "answer_preservation"
+    ]
+  },
+  "facts_member": "ICEWS/unified_kg_icews_actor.csv",
+  "hdm": {
+    "ambiguity_universe": "full_normalized_fact_space",
+    "binning": "train_terciles",
+    "boundary_version": "hdm_v1",
+    "tau_amb": 0.740344,
+    "terciles": [
+      0.333,
+      0.667
+    ]
+  },
+  "license": "ICEWS terms; retain attribution, non-commercial research use",
+  "minimum_release_size": {
+    "dev": 2500,
+    "test": 2500,
+    "total": 20000,
+    "train": 10000
+  },
+  "quality": {
+    "manual_sample_size": 500,
+    "min_anchor_precision": 0.98,
+    "min_distractor_precision": 0.95,
+    "min_question_answer_precision": 0.98,
+    "min_substitute_precision": 0.95
+  },
+  "question_text_policy": "original",
+  "questions_member": "ICEWS/unified_kg_icews_actor_questions_all.csv",
+  "recall": {
+    "distractor_top_n": 500,
+    "per_anchor_top_n": 100,
+    "substitute_top_n": 200
+  },
+  "required_members": [
+    "ICEWS/unified_kg_icews_actor.csv",
+    "ICEWS/unified_kg_icews_actor_questions_all.csv",
+    "ICEWS/data_description.txt"
+  ],
+  "rule_version": "1.0.0",
+  "source_counts": {
+    "dev": 17298,
+    "test": 14621,
+    "train": 57453
+  },
+  "source_origin": "ICEWS Coded Event Data (actor-affiliation unified KG + generated questions)",
+  "source_release": "unified_kg_icews_actor",
+  "source_split_names": {
+    "test": "test",
+    "train": "train",
+    "validation": "dev"
+  },
+  "split_policy": {
+    "allow_move_between_splits": false,
+    "allow_resplit": false,
+    "family_id_usage": "audit_only",
+    "strategy": "inherit_source_split"
+  },
+  "target_benchmark_total": 89372,
+  "temporal_coverage": "sentinel-bounded: beginning of time (0001-01-01) .. end of time (9999-12-31)",
+  "threshold_fit_source": "train",
+  "valid_year_max": 9999,
+  "valid_year_min": 1
+}

@@ -1,0 +1,7 @@
+# PyTorch/CUDA are inherited from the matched AutoDL image.
+numpy==1.26.4
+gdown==5.2.0
+scikit-learn==1.5.2
+setuptools==75.1.0
+tqdm==4.66.5
+transformers==4.44.2

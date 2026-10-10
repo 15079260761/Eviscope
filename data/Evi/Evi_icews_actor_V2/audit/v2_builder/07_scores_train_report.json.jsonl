@@ -1,0 +1,6 @@
+{
+  "questions": 39364,
+  "split": "train",
+  "substitutes": 1462604,
+  "valid_gated_candidates": 2926447
+}

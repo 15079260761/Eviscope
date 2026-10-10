@@ -1,0 +1,17 @@
+{
+  "anchors": 2540352,
+  "distractor_subtypes": {
+    "answer_conflict": 5657359,
+    "boundary_confusable": 6060,
+    "entity_confusable": 11902744,
+    "multi_hop_shortcut": 4453136,
+    "temporal_confusable": 11338,
+    "time_conflict": 460439
+  },
+  "distractor_top_levels": {
+    "confusable": 16373278,
+    "contradictory": 6117798
+  },
+  "distractors": 22491076,
+  "substitutes": 208706
+}

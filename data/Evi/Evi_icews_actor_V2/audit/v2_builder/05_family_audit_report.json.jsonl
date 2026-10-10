@@ -1,0 +1,19 @@
+{
+  "details": {
+    "ambiguous_surface_same_split_groups": 14,
+    "ambiguous_surface_same_split_rows": 46,
+    "norm_cross_split_groups": 6178,
+    "norm_cross_split_rows": 21969,
+    "norm_duplicates_same_split": 3418,
+    "tmpl_cross_split_groups": 5029,
+    "tmpl_cross_split_rows": 27403,
+    "tmpl_duplicates_same_split": 1683
+  },
+  "excluded": 29129,
+  "families": 59037,
+  "family_size_histogram": {
+    "1": 59037
+  },
+  "near_duplicate_cross_split_groups": 11207,
+  "source_near_duplicates_same_split": 5101
+}

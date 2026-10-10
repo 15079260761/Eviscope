@@ -1,0 +1,12 @@
+{
+  "accepted_facts": 107940,
+  "dataset": "icews_actor",
+  "duplicate_facts": 65,
+  "input_rows": 108005,
+  "max_records": null,
+  "output": "D:\\study\\TKGQA\\Eviscope_rebuild\\data\\Evi\\Evi_icews_actor_V2\\construction_builder\\data\\interim\\icews_actor\\02_facts.jsonl",
+  "quarantined_facts": 0,
+  "rejection_reasons": {},
+  "unknown_end": 66906,
+  "unknown_start": 49796
+}

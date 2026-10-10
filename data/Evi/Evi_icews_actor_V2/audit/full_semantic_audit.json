@@ -1,0 +1,29 @@
+{
+  "all_fact_indices_valid": true,
+  "all_pools_unique_and_fixed_size": true,
+  "answer_bearing_neutral_facts": 0,
+  "eligible_by_mode": {
+    "clean_control": 48122,
+    "distractor_only": 24948,
+    "full_eviscope": 23453,
+    "substitute_only": 46504
+  },
+  "facts": 107940,
+  "modes": [
+    "clean_control",
+    "substitute_only",
+    "distractor_only",
+    "full_eviscope"
+  ],
+  "neutral_background_is_shared": true,
+  "pool_size": 1000,
+  "questions": 48122,
+  "role_precedence": "anchor > substitute > distractor",
+  "roles_are_condition_correct": true,
+  "splits": {
+    "dev": 9086,
+    "test": 7123,
+    "train": 31913
+  },
+  "status": "pass"
+}

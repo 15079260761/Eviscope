@@ -1,0 +1,8 @@
+{
+  "below_tau_sim": 2556788,
+  "distractors": 356056,
+  "potential_substitute_above_tau_min": 1446888,
+  "questions": 39364,
+  "split": "train",
+  "uncertain_supporting_candidate": 753930
+}

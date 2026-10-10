@@ -1,0 +1,22 @@
+# Relation equivalence / inverse table (section 6.4 of the construction document).
+#
+# Substitutable-evidence recall consults this table for relation-level synonymy
+# and inverse pairs.  Entries must be curated: only add a pair after manual
+# verification that the two relations are logically interchangeable in the
+# source KG.  Similarity of relation *text* alone never creates an entry.
+#
+# Empty by default: the deterministic executors of both sub-benchmarks already
+# verify answer preservation, and neither KG ships a curated relation-synonym
+# resource.  Structure:
+#   equivalence_groups:  list of lists of relation ids that may substitute one
+#                        another (same subject->object direction)
+#   inverse_pairs:       list of [r_a, r_b] pairs where (s, r_a, o) <-> (o, r_b, s)
+
+equivalence_groups: []
+inverse_pairs: []
+
+# e.g. for a future curated extension:
+# equivalence_groups:
+#   - ["P54", "P118"]        # member of sports team / league (manual check required)
+# inverse_pairs:
+#   - ["P150", "P131"]       # contains / located in (manual check required)

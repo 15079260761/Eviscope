@@ -1,0 +1,68 @@
+# EviScope-CronQuestions — 规范: EviScope数据基准从零构建方案.md (sections 4/5/6/24)
+dataset: cronquestions
+
+# ---- Frozen source locks (section 4/6) ----
+source_release: "data_v2 (wikidata_big)"
+source_origin: "CronQuestions (Saxena et al., 2021) wikidata_big KG + question pickles"
+license: "CronQuestions terms; Wikidata CC0 for underlying facts"
+temporal_coverage: "year-granularity; year-only facts normalized to YYYY-01-01..YYYY-12-31"
+
+# Archive path relative to the builder root; extracted-directory fallback is automatic.
+archive_path: "../data/CronQuestions.zip"
+required_members:
+  - "CronQuestions/wikidata_big/kg/full.txt"
+  - "CronQuestions/wikidata_big/kg/wd_id2entity_text.txt"
+  - "CronQuestions/wikidata_big/kg/wd_id2relation_text.txt"
+  - "CronQuestions/wikidata_big/kg/wd_id_to_aliases.pickle"
+  - "CronQuestions/wikidata_big/questions/train.pickle"
+  - "CronQuestions/wikidata_big/questions/valid.pickle"
+  - "CronQuestions/wikidata_big/questions/test.pickle"
+facts_member: "CronQuestions/wikidata_big/kg/full.txt"
+entity_map_member: "CronQuestions/wikidata_big/kg/wd_id2entity_text.txt"
+relation_map_member: "CronQuestions/wikidata_big/kg/wd_id2relation_text.txt"
+alias_map_member: "CronQuestions/wikidata_big/kg/wd_id_to_aliases.pickle"
+questions_members:
+  train: "CronQuestions/wikidata_big/questions/train.pickle"
+  valid: "CronQuestions/wikidata_big/questions/valid.pickle"
+  test: "CronQuestions/wikidata_big/questions/test.pickle"
+
+# Source split counts, re-verified from the source files at stage 00/01
+# (section 4.1: these are the source universe; the benchmark total is whatever
+# survives the validation gates — see the 完整目标规模说明 supplement).
+source_counts: {train: 350000, valid: 30000, test: 30000}
+# pickle key -> benchmark split name
+source_split_names: {train: train, valid: dev, test: test}
+target_benchmark_total: 41720   # reproduction REFERENCE ONLY, never enforced
+
+# Section 5: inherit the source split; no re-splitting exists in this pipeline.
+split_policy:
+  strategy: inherit_source_split
+  allow_resplit: false
+  allow_move_between_splits: false
+  family_id_usage: audit_only
+
+# Source answer sets were truncated at 100 by the original release; when the
+# deterministic executor derives a strict superset of a size-100 gold set the
+# re-executed (complete) set is authoritative.
+answer_truncation_cap: 100
+
+valid_year_min: 1
+valid_year_max: 9999
+
+candidate_pool:
+  size: 1000
+
+recall:
+  substitute_top_n: 200
+  distractor_top_n: 500
+  per_anchor_top_n: 100
+
+quality:
+  min_anchor_precision: 0.98
+  min_substitute_precision: 0.95
+  min_distractor_precision: 0.95
+  min_question_answer_precision: 0.98
+  manual_sample_size: 500
+
+rule_version: "1.0.0"
+construction_seed: 20260923

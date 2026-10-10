@@ -1,0 +1,6 @@
+{
+  "questions": 11135,
+  "split": "dev",
+  "substitutes": 408126,
+  "valid_gated_candidates": 819751
+}

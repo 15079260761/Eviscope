@@ -1,0 +1,12 @@
+{
+  "checks": {},
+  "fact_catalog_sha256": "b773f40e83000cd58c83428ff7abb052940de4bc2b3e86aac5cc925abf8d1ceb",
+  "replayed_by_mode": {
+    "clean": 192,
+    "distractor_only": 192,
+    "full": 11,
+    "substitute_only": 11
+  },
+  "status": "pass",
+  "stored_neutral_fact_ids": 0
+}

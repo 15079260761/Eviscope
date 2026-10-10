@@ -1,0 +1,11 @@
+{
+  "encoder_revision": "1.0.0:dim=4096:corpus=0e9ee21bcecef907",
+  "level_counts": {
+    "complex": 100321,
+    "medium": 65082,
+    "simple": 161644
+  },
+  "mean_A_q": 0.744818,
+  "mean_C_q": 7.767544,
+  "mean_D_q": 8.673346
+}

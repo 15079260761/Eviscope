@@ -1,0 +1,21 @@
+archive_path: ../data/ICEWS.zip
+benchmark_version: 1.0.0
+checked_at: "2026-10-02T03:53:32+00:00"
+dataset: icews_actor
+license: ICEWS terms; retain attribution, non-commercial research use
+member_sha256:
+  ICEWS/data_description.txt: 310bb39ebe688cc9901ef496fae25fee7da01008013b45e2bdaaf329eb561d65
+  ICEWS/unified_kg_icews_actor.csv: 9f5a62c80eab8285d3e23fdf9aa6eaf78a50df8beb3c8b97c63f4c4deb4577e2
+  ICEWS/unified_kg_icews_actor_questions_all.csv: bed6083a08274a8856d389cd1cf01dae8905652d4daec67f4c33f5ca92e0d9b1
+source_kind: directory
+source_path: "D:\\study\\TKGQA\\Eviscope_rebuild\\data\\Ori\\ICEWS"
+source_release: unified_kg_icews_actor
+source_split_counts_mapped:
+  dev: 17298
+  test: 14621
+  train: 57453
+source_split_counts_raw:
+  test: 14621
+  train: 57453
+  validation: 17298
+temporal_coverage: "sentinel-bounded: beginning of time (0001-01-01) .. end of time (9999-12-31)"

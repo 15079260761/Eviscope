@@ -1,0 +1,11 @@
+# Structure-Aware Evaluation — 规范 section 17 (the paper's definitions
+# verbatim: M_ij = cos(e(f_i), e(r_j)) if > tau else 0; BS@K = max-weight
+# one-to-one matching / |F*(q)|; NO rank discount, no double credit).
+
+evaluation:
+  # fitted on Train (median anchor-substitute cosine), frozen for Dev/Test
+  bs_tau: "fit_on_train:median_anchor_substitute_cosine"
+  k_values: [1, 10]
+  metrics: [hits_at_k, bs_at_k, coverage_at_k]
+  matching: max_weight_one_to_one
+  rank_discount: none

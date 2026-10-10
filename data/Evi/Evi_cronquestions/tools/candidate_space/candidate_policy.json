@@ -1,0 +1,16 @@
+{
+  "background_policy": "question_year_then_full_corpus_fallback",
+  "fact_catalog_sha256": "b773f40e83000cd58c83428ff7abb052940de4bc2b3e86aac5cc925abf8d1ceb",
+  "fact_reference": "dense_uint32_index",
+  "model_visibility": "materialized_candidate_list_only",
+  "modes": [
+    "clean",
+    "substitute_only",
+    "distractor_only",
+    "full"
+  ],
+  "policy_version": "lazy_neutral_v1",
+  "pool_size": 1000,
+  "representation": "lazy_candidate_descriptor_v1",
+  "stored_neutral_fact_ids": 0
+}

@@ -1,0 +1,17 @@
+{
+  "boundaries": {
+    "b1": 3.0,
+    "b2": 3.5,
+    "boundary_version": "hdm_v1",
+    "fit_source": "train_v1_frozen",
+    "n_train": 15225
+  },
+  "encoder_revision": "1.0.0:dim=4096:corpus=f122f027755c1aa9",
+  "level_counts": {
+    "complex": 26029,
+    "medium": 9510,
+    "simple": 23498
+  },
+  "neighborhood_cache_size": 999,
+  "tau_amb": 0.740344
+}

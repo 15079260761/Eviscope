@@ -1,0 +1,50 @@
+{
+  "dataset": "cronquestions",
+  "per_split": {
+    "dev": {
+      "excluded": 5338,
+      "exclusion_reasons": {
+        "anchor_minimality_failed": 1,
+        "executor_cannot_reproduce_answers": 4570,
+        "near_duplicate_or_cross_split_family": 219,
+        "no_verified_evidence_role": 548
+      },
+      "retained": 24662,
+      "source_candidates": 30000
+    },
+    "test": {
+      "excluded": 5457,
+      "exclusion_reasons": {
+        "anchor_minimality_failed": 1,
+        "executor_cannot_reproduce_answers": 4680,
+        "near_duplicate_or_cross_split_family": 203,
+        "no_verified_evidence_role": 573
+      },
+      "retained": 24543,
+      "source_candidates": 30000
+    },
+    "train": {
+      "excluded": 72158,
+      "exclusion_reasons": {
+        "executor_cannot_reproduce_answers": 63105,
+        "near_duplicate_or_cross_split_family": 1210,
+        "no_verified_evidence_role": 7843
+      },
+      "retained": 277842,
+      "source_candidates": 350000
+    }
+  },
+  "source_counts": {
+    "test": 30000,
+    "train": 350000,
+    "valid": 30000
+  },
+  "source_split_counts_actual": {
+    "dev": 30000,
+    "test": 30000,
+    "train": 350000
+  },
+  "target_benchmark_total_reference": 41720,
+  "total_excluded": 82953,
+  "total_retained": 327047
+}

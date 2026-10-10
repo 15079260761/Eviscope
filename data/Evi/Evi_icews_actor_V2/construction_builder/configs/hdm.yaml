@@ -1,0 +1,22 @@
+# Hybrid Difficulty Modeling — 规范 section 15 (the paper's formulas verbatim).
+# A(q) = (1/N) * sum_i (|N(f_i)| - 1) / |F*(q)|,  N = |F*(q)|
+# D(q) = C(q) * (1 + A(q)),  C(q) = |F*(q)|
+
+hdm:
+  ambiguity_universe: full_normalized_fact_space
+  # paper example structure shows tau_amb: 0.0; the released value is fitted
+  # on Train (median anchor->nearest-non-self cosine) and frozen.
+  tau_amb: "fit_on_train:median_nearest_neighbor_cosine"
+  binning: train_terciles
+  terciles: [0.333, 0.667]
+  boundary_version: "hdm_v1"
+
+# Frozen text encoder (sections 7/12.3/14): deterministic token-hashing
+# encoder, corpus-IDF weighted, sparse, L2-normalized.  The corpus stats are
+# part of the frozen revision recorded in every HDM/evaluation output.
+encoder:
+  name: hashing_token_idf_v1
+  revision: "1.0.0"
+  pooling: l2_normalized_sparse
+  dim: 4096
+  max_tokens_per_fact: 32

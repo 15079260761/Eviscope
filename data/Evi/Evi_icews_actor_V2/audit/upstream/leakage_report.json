@@ -1,0 +1,39 @@
+{
+  "allowed_nonzero_metrics": {
+    "test_anchor_facts_in_train_labels": 155,
+    "test_distractor_facts_in_train_labels": 11567,
+    "test_substitute_facts_in_train_labels": 10807
+  },
+  "dataset": "icews_actor",
+  "encoder_revision": "1.0.0:dim=4096:corpus=f122f027755c1aa9",
+  "hdm_boundaries": {
+    "b1": 3.0,
+    "b2": 3.666666666666667,
+    "boundary_version": "hdm_v1",
+    "fit_source": "train",
+    "n_train": 19950
+  },
+  "mandatory_checks": {
+    "icews_question_surface_cross_split": 0,
+    "icews_semantic_family_cross_split": 0,
+    "paired_id_cross_split": 0,
+    "pool_missing_eviscope": 0,
+    "pool_missing_source_control": 0
+  },
+  "notes": [
+    "split consistency, evidence validation, HDM and BS checks per sections 20/21/22; any non-zero mandatory item blocks release.",
+    "Entity/relation/time/fact overlap across splits is allowed and reported separately. For ICEWS-Actor, shared raw fact IDs are descriptive overlap metrics while paired IDs, model-visible question surfaces and semantic families must remain split-disjoint. CronQuestions retains its existing stricter fact-role audit contract."
+  ],
+  "status": "pass",
+  "thresholds": {
+    "bs_tau": 0.349259,
+    "fit_n_anchor_substitute_pairs": 2926447,
+    "fit_n_candidates": 5113662,
+    "fit_n_valid_gated": 2926447,
+    "fit_source": "train",
+    "seed": 20260923,
+    "tau_eq": 0.548842,
+    "tau_min": 0.548842,
+    "tau_sim": 0.312181
+  }
+}

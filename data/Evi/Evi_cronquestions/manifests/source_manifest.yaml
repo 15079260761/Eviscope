@@ -1,0 +1,25 @@
+archive_path: ../data/CronQuestions.zip
+benchmark_version: 3.0.0-cron-compact
+checked_at: "2026-09-25T06:18:06+00:00"
+dataset: cronquestions
+license: CronQuestions terms; Wikidata CC0 for underlying facts
+member_sha256:
+  CronQuestions/wikidata_big/kg/full.txt: 491a8b2ded719a65b74c54a2d2f5b9af12eaf29e924eeb33cf44ae5906b0eb60
+  CronQuestions/wikidata_big/kg/wd_id2entity_text.txt: e7c269c184f5b4303716d760193e41ffbd0491902a852d13f0826e7739f2fbe5
+  CronQuestions/wikidata_big/kg/wd_id2relation_text.txt: b8f692d22b0d089d259287d058c3a8521a3a096d68f3082b85bc11209bc87c8a
+  CronQuestions/wikidata_big/kg/wd_id_to_aliases.pickle: bd3fa6fe515276bf6cbb90ef91cf62c5c0c61d8e79199f13faf0e59a1afe4ccd
+  CronQuestions/wikidata_big/questions/test.pickle: 9fed4b912e450305b34538e709c695704d0b830a74fd4e044a9d263757d10000
+  CronQuestions/wikidata_big/questions/train.pickle: 66d3f4233be4cdbf55d1b475485bdbb2246f91837ff6e8319a6a4b21a8a947fe
+  CronQuestions/wikidata_big/questions/valid.pickle: 1fceadcdac83a72d591f29d7f85198ac6b50a2ce7f0803e3534006c7149dd9fc
+source_kind: directory
+source_path: /root/autodl-tmp/Eviscope_rebuild/data/CronQuestions
+source_release: data_v2 (wikidata_big)
+source_split_counts_mapped:
+  dev: 30000
+  test: 30000
+  train: 350000
+source_split_counts_raw:
+  test: 30000
+  train: 350000
+  valid: 30000
+temporal_coverage: year-granularity; year-only facts normalized to YYYY-01-01..YYYY-12-31

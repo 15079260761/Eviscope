@@ -1,0 +1,167 @@
+alias_map_member: CronQuestions/wikidata_big/kg/wd_id_to_aliases.pickle
+answer_truncation_cap: 100
+archive_path: ../data/CronQuestions.zip
+candidate_pool:
+  audit_materialization_sample: 5000
+  background_policy: question_year_then_full_corpus_fallback
+  fact_reference: dense_uint32_index
+  max_distractors: 64
+  max_substitutes: 32
+  modes:
+    - clean
+    - substitute_only
+    - distractor_only
+    - full
+  policy_version: lazy_neutral_v1
+  representation: lazy_candidate_descriptor_v1
+  size: 1000
+  store_neutral_fact_ids: false
+construction_seed: 20260923
+dataset: cronquestions
+encoder_revision: "1.0.0:dim=4096:corpus=0e9ee21bcecef907"
+entity_map_member: CronQuestions/wikidata_big/kg/wd_id2entity_text.txt
+evaluation:
+  bs_tau: 0.871848
+  k_values:
+    - 1
+    - 10
+  matching: max_weight_one_to_one
+  metrics:
+    - hits_at_k
+    - bs_at_k
+    - coverage_at_k
+  rank_discount: none
+evidence_scoring:
+  distractor_top_levels:
+    confusable:
+      - entity_confusable
+      - relation_confusable
+      - temporal_confusable
+      - boundary_confusable
+      - multi_hop_shortcut
+    contradictory:
+      - negation_conflict
+      - entity_conflict
+      - relation_conflict
+      - time_conflict
+      - answer_conflict
+  negation_markers:
+    - did not
+    - never
+    - no longer
+    - ceased
+    - not
+  relation_scores:
+    equivalence_table: 0.9
+    identical: 1.0
+    inverse_table: 0.8
+    otherwise: 0.0
+  substitutability:
+    alpha: 0.5
+    beta: 0.25
+    gamma: 0.25
+    tau_eq: "fit_on_train:median_sub_score_over_valid_gated_candidates"
+    tau_min: same_as_tau_eq
+    tau_sim: "fit_on_train:median_candidate_max_semantic_similarity"
+  tau_eq: 0.573633
+  tau_min: 0.667949
+  tau_sim: 0.372947
+  valid_gate_checks:
+    - negation_consistency
+    - core_entity_consistency
+    - subject_object_role
+    - relation_logic
+    - temporal_operator
+    - answer_type
+    - answer_preservation
+facts_member: CronQuestions/wikidata_big/kg/full.txt
+hdm:
+  ambiguity_universe: full_normalized_fact_space
+  binning: train_terciles
+  boundary_version: hdm_v1
+  tau_amb: 0.724076
+  terciles:
+    - 0.333
+    - 0.667
+license: CronQuestions terms; Wikidata CC0 for underlying facts
+minimum_mode_coverage_ratio:
+  distractor_only: 0.05
+  full: 0.05
+  substitute_only: 0.05
+minimum_mode_eligible_size:
+  distractor_only:
+    dev: 1000
+    test: 1000
+    total: 15000
+    train: 12000
+  full:
+    dev: 1000
+    test: 1000
+    total: 15000
+    train: 12000
+  substitute_only:
+    dev: 1000
+    test: 1000
+    total: 15000
+    train: 12000
+minimum_release_size:
+  dev: 2800
+  test: 2800
+  total: 41000
+  train: 34000
+primary_four_way_cohort: full
+quality:
+  manual_sample_size: 500
+  min_anchor_precision: 0.98
+  min_distractor_precision: 0.95
+  min_question_answer_precision: 0.98
+  min_substitute_precision: 0.95
+questions_members:
+  test: CronQuestions/wikidata_big/questions/test.pickle
+  train: CronQuestions/wikidata_big/questions/train.pickle
+  valid: CronQuestions/wikidata_big/questions/valid.pickle
+recall:
+  distractor_top_n: 192
+  per_anchor_top_n: 64
+  substitute_top_n: 96
+relation_map_member: CronQuestions/wikidata_big/kg/wd_id2relation_text.txt
+required_members:
+  - CronQuestions/wikidata_big/kg/full.txt
+  - CronQuestions/wikidata_big/kg/wd_id2entity_text.txt
+  - CronQuestions/wikidata_big/kg/wd_id2relation_text.txt
+  - CronQuestions/wikidata_big/kg/wd_id_to_aliases.pickle
+  - CronQuestions/wikidata_big/questions/train.pickle
+  - CronQuestions/wikidata_big/questions/valid.pickle
+  - CronQuestions/wikidata_big/questions/test.pickle
+retention:
+  require_any_role: true
+  require_distractor: false
+  require_substitute: false
+  require_verified_anchor: true
+  role_missing_policy: retain_if_either_verified_role_exists
+rule_version: 3.0.0-cron-compact
+source_counts:
+  test: 30000
+  train: 350000
+  valid: 30000
+source_origin: CronQuestions (Saxena et al., 2021) wikidata_big KG + question pickles
+source_release: data_v2 (wikidata_big)
+source_split_names:
+  test: test
+  train: train
+  valid: dev
+split_policy:
+  allow_move_between_splits: false
+  allow_resplit: false
+  family_id_usage: audit_only
+  strategy: inherit_source_split
+target_benchmark_total: 41720
+temporal_coverage: year-granularity; year-only facts normalized to YYYY-01-01..YYYY-12-31
+threshold_fit_source: train
+threshold_fitting:
+  bs_quantile: 0.5
+  distractor_min_quantile: 0.25
+  distractor_similarity_quantile: 0.25
+  substitute_quantile: 0.05
+valid_year_max: 9999
+valid_year_min: 1

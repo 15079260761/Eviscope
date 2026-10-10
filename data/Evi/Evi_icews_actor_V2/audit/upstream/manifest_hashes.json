@@ -1,0 +1,10 @@
+{
+  "locked_at": "2026-09-23T11:26:14+00:00",
+  "paired_id_disambiguated": 0,
+  "source_split_manifest_sha256": "455c3bee9580ca095f75b923bd802ae0faaf7dc38990665886e09d6322dd519f",
+  "split_counts": {
+    "dev": 17170,
+    "test": 14541,
+    "train": 56982
+  }
+}

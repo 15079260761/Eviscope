@@ -1,0 +1,112 @@
+{
+  "protocol": "subgtr_standard_and_complex_paired_clean_full_v1",
+  "seed": 20260927,
+  "standard": {
+    "seed": 20260927,
+    "train_limit": 10000,
+    "dev_limit": 2000,
+    "source_split_inherited": true,
+    "evaluation_protocol": "paired_clean_full_v1",
+    "evaluation_modes": [
+      "clean",
+      "full"
+    ],
+    "evaluation_cohort_size": 1691,
+    "splits": {
+      "train": {
+        "release_available": 277842,
+        "prepared": 10000,
+        "output": "train_10k.pickle",
+        "answer_set_mismatches_reconciled_to_release": 564,
+        "type_counts": {
+          "time_join": 903,
+          "first_last": 3656,
+          "simple_entity": 3163,
+          "simple_time": 2127,
+          "before_after": 151
+        },
+        "answer_type_counts": {
+          "entity": 5739,
+          "time": 4261
+        }
+      },
+      "dev": {
+        "release_available": 24662,
+        "prepared": 2000,
+        "output": "valid_2k.pickle",
+        "answer_set_mismatches_reconciled_to_release": 39,
+        "type_counts": {
+          "first_last": 764,
+          "simple_entity": 605,
+          "time_join": 183,
+          "simple_time": 405,
+          "before_after": 43
+        },
+        "answer_type_counts": {
+          "entity": 1199,
+          "time": 801
+        }
+      },
+      "test": {
+        "release_available": 1691,
+        "prepared": 1691,
+        "output": "test_eviscope.pickle",
+        "answer_set_mismatches_reconciled_to_release": 42,
+        "type_counts": {
+          "time_join": 1246,
+          "simple_entity": 167,
+          "before_after": 179,
+          "first_last": 99
+        },
+        "answer_type_counts": {
+          "entity": 1595,
+          "time": 96
+        }
+      }
+    }
+  },
+  "complex": {
+    "configuration": "wikidata_big_complex",
+    "training_source": "SubGTR ComplexCronQuestions/train.pickle",
+    "validation_source": "SubGTR ComplexCronQuestions/valid.pickle",
+    "test_source": "shared paired EviScope CronQuestions Test cohort",
+    "test_gold_in_model_input": false,
+    "source_counts": {
+      "train": 35795,
+      "dev": 5020
+    },
+    "excluded_against_formal_test": {
+      "train": {
+        "surface_overlap": 0,
+        "semantic_family_overlap": 0,
+        "eligible": 35795
+      },
+      "dev": {
+        "surface_overlap": 0,
+        "semantic_family_overlap": 188,
+        "eligible": 4832
+      }
+    },
+    "splits": {
+      "train": {
+        "prepared": 10000,
+        "type_counts": {
+          "first_last": 6717,
+          "time_join": 1468,
+          "before_after": 1815
+        }
+      },
+      "dev": {
+        "prepared": 2000,
+        "type_counts": {
+          "first_last": 1411,
+          "time_join": 286,
+          "before_after": 303
+        }
+      },
+      "test": {
+        "prepared": 1691
+      }
+    }
+  }
+}

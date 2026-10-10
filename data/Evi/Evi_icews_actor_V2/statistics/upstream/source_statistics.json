@@ -1,0 +1,32 @@
+{
+  "dataset": "icews_actor",
+  "per_split": {
+    "dev": {
+      "formal_quality_excluded_unique": 1260,
+      "formal_quality_exclusions_by_reason": {
+        "answer_literal_in_question": 1035,
+        "serialized_template_object_in_question": 362
+      },
+      "pre_formal_release_rows": 5753,
+      "retained": 4493
+    },
+    "test": {
+      "formal_quality_excluded_unique": 894,
+      "formal_quality_exclusions_by_reason": {
+        "answer_literal_in_question": 656,
+        "serialized_template_object_in_question": 388
+      },
+      "pre_formal_release_rows": 4629,
+      "retained": 3735
+    },
+    "train": {
+      "formal_quality_excluded_unique": 4725,
+      "formal_quality_exclusions_by_reason": {
+        "answer_literal_in_question": 4050,
+        "serialized_template_object_in_question": 1185
+      },
+      "pre_formal_release_rows": 19950,
+      "retained": 15225
+    }
+  }
+}

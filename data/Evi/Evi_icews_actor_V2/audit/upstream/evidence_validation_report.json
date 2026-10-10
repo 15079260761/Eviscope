@@ -1,0 +1,28 @@
+{
+  "anchors": 73987,
+  "distractors": 510060,
+  "excluded": 58361,
+  "exclusion_reasons": {
+    "anchor_sufficiency_failed": 527,
+    "icews_duplicate_ambiguous_or_cross_split": 29129,
+    "no_verified_distractor": 26908,
+    "no_verified_substitute": 1937
+  },
+  "per_split": {
+    "dev": {
+      "excluded": 11417,
+      "retained": 5753
+    },
+    "test": {
+      "excluded": 9912,
+      "retained": 4629
+    },
+    "train": {
+      "excluded": 37032,
+      "retained": 19950
+    }
+  },
+  "retained": 30332,
+  "substitute_anchor_coverage_mean": 0.741522,
+  "substitutes": 934096
+}

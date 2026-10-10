@@ -1,0 +1,13 @@
+{
+  "cross_split_question_id_intersections": 0,
+  "fact_catalog_sha256": "726a3c52ab8fd40fbb2e442fff581c8223095c4154bfb594644e4d3c5e4fa2f8",
+  "old_four_way_set_preserved": true,
+  "quality_filter_applied": true,
+  "source": "D:\\study\\TKGQA\\Eviscope_rebuild\\data\\Ori\\ICEWS",
+  "stage_11_sha256": "eda5173c69e176f7741a9a01e9528c49c2e63ca9fd5242a971490694717449aa",
+  "status": "pass",
+  "thresholds_and_hdm_boundaries_frozen_from_v1": true,
+  "total": 48122,
+  "v1_preserved": 23453,
+  "v2_added": 24669
+}

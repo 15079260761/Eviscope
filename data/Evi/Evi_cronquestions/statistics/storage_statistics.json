@@ -1,0 +1,22 @@
+{
+  "actual_release_bytes": 1368529086,
+  "actual_release_mib": 1305.131,
+  "avoided_expanded_neutral_references": 327047000,
+  "bytes_by_area": {
+    "audit": 20980,
+    "candidate_space": 215037807,
+    "cohorts": 49747946,
+    "evaluator": 13558,
+    "facts": 344958251,
+    "manifests": 236582440,
+    "private_labels": 27073479,
+    "questions": 159371832,
+    "root": 11624,
+    "src": 19847,
+    "statistics": 3003,
+    "supervision": 335688319
+  },
+  "note": "No four-way pool duplication; views are materialized on demand.",
+  "representation": "lazy_candidate_descriptor_v1",
+  "stored_neutral_fact_ids": 0
+}

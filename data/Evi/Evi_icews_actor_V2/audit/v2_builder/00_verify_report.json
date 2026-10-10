@@ -1,0 +1,54 @@
+{
+  "checked_at": "2026-10-02T03:53:32+00:00",
+  "dataset": "icews_actor",
+  "member_sha256": {
+    "ICEWS/data_description.txt": "310bb39ebe688cc9901ef496fae25fee7da01008013b45e2bdaaf329eb561d65",
+    "ICEWS/unified_kg_icews_actor.csv": "9f5a62c80eab8285d3e23fdf9aa6eaf78a50df8beb3c8b97c63f4c4deb4577e2",
+    "ICEWS/unified_kg_icews_actor_questions_all.csv": "bed6083a08274a8856d389cd1cf01dae8905652d4daec67f4c33f5ca92e0d9b1"
+  },
+  "member_sizes": {
+    "ICEWS/data_description.txt": 1870,
+    "ICEWS/unified_kg_icews_actor.csv": 21225432,
+    "ICEWS/unified_kg_icews_actor_questions_all.csv": 54544022
+  },
+  "missing_members": [],
+  "release_locks": {
+    "license": {
+      "locked": true,
+      "value": "ICEWS terms; retain attribution, non-commercial research use"
+    },
+    "source_release": {
+      "locked": true,
+      "value": "unified_kg_icews_actor"
+    },
+    "temporal_coverage": {
+      "locked": true,
+      "value": "sentinel-bounded: beginning of time (0001-01-01) .. end of time (9999-12-31)"
+    }
+  },
+  "required_members": [
+    "ICEWS/unified_kg_icews_actor.csv",
+    "ICEWS/unified_kg_icews_actor_questions_all.csv",
+    "ICEWS/data_description.txt"
+  ],
+  "source_kind": "directory",
+  "source_manifest_path": "D:\\study\\TKGQA\\Eviscope_rebuild\\data\\Evi\\Evi_icews_actor_V2\\construction_builder\\manifests\\icews_actor\\source_manifest.yaml",
+  "source_manifest_sha256": "e676871a1fc9612526520be2b35ba3be1e073071aeddcf8e403fe1b3c608e85c",
+  "source_path": "D:\\study\\TKGQA\\Eviscope_rebuild\\data\\Ori\\ICEWS",
+  "source_split_counts_expected": {
+    "dev": 17298,
+    "test": 14621,
+    "train": 57453
+  },
+  "source_split_counts_mapped": {
+    "dev": 17298,
+    "test": 14621,
+    "train": 57453
+  },
+  "source_split_counts_raw": {
+    "test": 14621,
+    "train": 57453,
+    "validation": 17298
+  },
+  "status": "pass"
+}

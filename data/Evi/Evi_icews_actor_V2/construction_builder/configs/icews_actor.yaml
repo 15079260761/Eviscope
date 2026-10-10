@@ -1,0 +1,64 @@
+# EviScope-ICEWS (ICEWS-Actor) — 规范: EviScope数据基准从零构建方案.md (sections 4/5/6/24)
+dataset: icews_actor
+
+# ---- Frozen source locks (section 4.2/6) ----
+source_release: "unified_kg_icews_actor"
+source_origin: "ICEWS Coded Event Data (actor-affiliation unified KG + generated questions)"
+license: "ICEWS terms; retain attribution, non-commercial research use"
+temporal_coverage: "sentinel-bounded: beginning of time (0001-01-01) .. end of time (9999-12-31)"
+
+archive_path: "../data/ICEWS.zip"
+required_members:
+  - "ICEWS/unified_kg_icews_actor.csv"
+  - "ICEWS/unified_kg_icews_actor_questions_all.csv"
+  - "ICEWS/data_description.txt"
+facts_member: "ICEWS/unified_kg_icews_actor.csv"
+questions_member: "ICEWS/unified_kg_icews_actor_questions_all.csv"
+
+# Section 4.2: these must be re-verified from the source file (stage 00/01
+# reports the actual counts; a mismatch blocks the build).
+source_counts: {train: 57453, dev: 17298, test: 14621}
+# source split column value -> benchmark split name ("validation" == dev)
+source_split_names: {train: train, validation: dev, test: test}
+target_benchmark_total: 89372   # reproduction REFERENCE ONLY, never enforced
+
+split_policy:
+  strategy: inherit_source_split
+  allow_resplit: false
+  allow_move_between_splits: false
+  family_id_usage: audit_only
+
+# The release's GPT paraphrase column is not row-aligned (the same surface is
+# attached to unrelated event chains and answers).  Formal construction uses
+# the deterministic question generated from each row's own events.
+question_text_policy: original
+
+# A formal full build must not silently publish another tiny/imbalanced subset.
+# These are acceptance gates, not quotas: the pipeline fails instead of padding
+# or weakening evidence validity when the verified release falls below them.
+minimum_release_size:
+  total: 20000
+  train: 10000
+  dev: 2500
+  test: 2500
+
+valid_year_min: 1
+valid_year_max: 9999
+
+candidate_pool:
+  size: 1000
+
+recall:
+  substitute_top_n: 200
+  distractor_top_n: 500
+  per_anchor_top_n: 100
+
+quality:
+  min_anchor_precision: 0.98
+  min_substitute_precision: 0.95
+  min_distractor_precision: 0.95
+  min_question_answer_precision: 0.98
+  manual_sample_size: 500
+
+rule_version: "1.0.0"
+construction_seed: 20260923

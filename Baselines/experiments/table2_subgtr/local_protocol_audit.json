@@ -1,0 +1,54 @@
+{
+  "status": "pass",
+  "protocol": "subgtr_standard_and_complex_paired_clean_full_v1",
+  "configurations": [
+    "wikidata_big",
+    "wikidata_big_complex"
+  ],
+  "views": [
+    "clean",
+    "full"
+  ],
+  "formal_runs": 4,
+  "train_samples_per_configuration": 10000,
+  "dev_samples_per_configuration": 2000,
+  "test_questions_per_run": 1691,
+  "candidate_pool_sizes": {
+    "clean": [
+      1000
+    ],
+    "full": [
+      1000
+    ]
+  },
+  "shared_test_order": true,
+  "test_gold_in_model_input": false,
+  "complex_validation_overlap_removed": true,
+  "release_leakage_audit": "pass",
+  "splits": {
+    "wikidata_big/train_10k": {
+      "rows": 10000,
+      "sha256": "0db6d632362286f9d7dacd4353aef1f2be4657e16bd62ef12741a4010c3676d0"
+    },
+    "wikidata_big/valid_2k": {
+      "rows": 2000,
+      "sha256": "3de6d4c958452a0269f0e413a617949e3370d4d4dba24be1668d54cb43c23d0b"
+    },
+    "wikidata_big/test_eviscope": {
+      "rows": 1691,
+      "sha256": "0e1c9dcd557da378f950bc6202f120696a9cdc576036a7a7994a5da3ffebeeaa"
+    },
+    "wikidata_big_complex/train_10k": {
+      "rows": 10000,
+      "sha256": "1bdf0055596db4a990e74b7b4bbd85194bfd1c9c7028f6f997f356c2c393fc28"
+    },
+    "wikidata_big_complex/valid_2k": {
+      "rows": 2000,
+      "sha256": "f4a3cadd7db3f05aec16ff0dfd5367323eca9a16cc86a8d5c5921b92e8684b61"
+    },
+    "wikidata_big_complex/test_eviscope": {
+      "rows": 1691,
+      "sha256": "0e1c9dcd557da378f950bc6202f120696a9cdc576036a7a7994a5da3ffebeeaa"
+    }
+  }
+}

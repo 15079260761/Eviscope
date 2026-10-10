@@ -1,0 +1,64 @@
+{
+  "seed": 20260926,
+  "train_limit": 10000,
+  "dev_limit": 2000,
+  "source_split_inherited": true,
+  "evaluation_protocol": "paired_clean_full_v1",
+  "evaluation_modes": [
+    "clean",
+    "full"
+  ],
+  "evaluation_cohort_size": 1691,
+  "splits": {
+    "train": {
+      "release_available": 277842,
+      "prepared": 10000,
+      "output": "train_10k.pickle",
+      "answer_set_mismatches_reconciled_to_release": 564,
+      "type_counts": {
+        "time_join": 903,
+        "first_last": 3656,
+        "simple_entity": 3163,
+        "simple_time": 2127,
+        "before_after": 151
+      },
+      "answer_type_counts": {
+        "entity": 5739,
+        "time": 4261
+      }
+    },
+    "dev": {
+      "release_available": 24662,
+      "prepared": 2000,
+      "output": "valid_2k.pickle",
+      "answer_set_mismatches_reconciled_to_release": 39,
+      "type_counts": {
+        "first_last": 764,
+        "simple_entity": 605,
+        "time_join": 183,
+        "simple_time": 405,
+        "before_after": 43
+      },
+      "answer_type_counts": {
+        "entity": 1199,
+        "time": 801
+      }
+    },
+    "test": {
+      "release_available": 1691,
+      "prepared": 1691,
+      "output": "test_eviscope.pickle",
+      "answer_set_mismatches_reconciled_to_release": 42,
+      "type_counts": {
+        "time_join": 1246,
+        "simple_entity": 167,
+        "before_after": 179,
+        "first_last": 99
+      },
+      "answer_type_counts": {
+        "entity": 1595,
+        "time": 96
+      }
+    }
+  }
+}

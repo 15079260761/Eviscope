@@ -1,0 +1,11 @@
+{
+  "control_pools": 23453,
+  "eviscope_pools": 23453,
+  "paired_id_uniqueness_verified": true,
+  "paired_question_count": 23453,
+  "view_row_count": {
+    "dev": 4493,
+    "test": 3735,
+    "train": 15225
+  }
+}

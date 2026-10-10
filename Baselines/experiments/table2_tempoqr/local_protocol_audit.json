@@ -1,0 +1,50 @@
+{
+  "status": "pass",
+  "protocol": "tempoqr_three_config_paired_clean_full_v1",
+  "configurations": {
+    "soft_cronkgqa": {
+      "model": "QA_cronkgqa",
+      "supervision": "soft"
+    },
+    "soft_tempoqr": {
+      "model": "QA_TempoQR",
+      "supervision": "soft"
+    },
+    "hard_tempoqr": {
+      "model": "QA_TempoQR",
+      "supervision": "hard"
+    }
+  },
+  "views": [
+    "clean",
+    "full"
+  ],
+  "formal_runs": 6,
+  "train_samples_per_configuration": 10000,
+  "dev_samples_per_configuration": 2000,
+  "test_questions_per_run": 1691,
+  "candidate_pool_sizes": {
+    "clean": [
+      1000
+    ],
+    "full": [
+      1000
+    ]
+  },
+  "test_gold_in_model_input": false,
+  "release_leakage_audit": "pass",
+  "splits": {
+    "train_10k": {
+      "rows": 10000,
+      "sha256": "0db6d632362286f9d7dacd4353aef1f2be4657e16bd62ef12741a4010c3676d0"
+    },
+    "valid_2k": {
+      "rows": 2000,
+      "sha256": "3de6d4c958452a0269f0e413a617949e3370d4d4dba24be1668d54cb43c23d0b"
+    },
+    "test_eviscope": {
+      "rows": 1691,
+      "sha256": "0e1c9dcd557da378f950bc6202f120696a9cdc576036a7a7994a5da3ffebeeaa"
+    }
+  }
+}

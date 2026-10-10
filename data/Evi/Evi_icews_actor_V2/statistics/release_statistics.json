@@ -1,0 +1,81 @@
+{
+  "fact_count": 107940,
+  "hdm": {
+    "frozen_boundaries": {
+      "medium_max": 3.5,
+      "simple_max": 3.0
+    },
+    "frozen_tau_amb": 0.740344,
+    "level_counts": {
+      "complex": 20117,
+      "medium": 7584,
+      "simple": 20421
+    },
+    "mean_A_q": 0.428221,
+    "mean_C_q": 2.486243,
+    "mean_D_q": 3.491002
+  },
+  "policy_version": "icews_lazy_neutral_v1",
+  "pool_size": 1000,
+  "quality_excluded": 10915,
+  "quality_filter": {
+    "dev": {
+      "answer_literal_in_question": 1803,
+      "serialized_template_object_in_question": 405
+    },
+    "test": {
+      "answer_literal_in_question": 1151,
+      "serialized_template_object_in_question": 426
+    },
+    "train": {
+      "answer_literal_in_question": 6706,
+      "serialized_template_object_in_question": 1300
+    }
+  },
+  "release_policy": "anchor-valid questions; optional verified roles control view eligibility",
+  "release_version": "2.0.0",
+  "splits": {
+    "dev": {
+      "anchors": 22523,
+      "distractors": 75526,
+      "eligible:clean_control": 9086,
+      "eligible:distractor_only": 4765,
+      "eligible:full_eviscope": 4493,
+      "eligible:substitute_only": 8793,
+      "questions": 9086,
+      "substitutes": 342249
+    },
+    "test": {
+      "anchors": 16621,
+      "distractors": 62039,
+      "eligible:clean_control": 7123,
+      "eligible:distractor_only": 3965,
+      "eligible:full_eviscope": 3735,
+      "eligible:substitute_only": 6876,
+      "questions": 7123,
+      "substitutes": 248482
+    },
+    "train": {
+      "anchors": 80499,
+      "distractors": 255847,
+      "eligible:clean_control": 31913,
+      "eligible:distractor_only": 16218,
+      "eligible:full_eviscope": 15225,
+      "eligible:substitute_only": 30835,
+      "questions": 31913,
+      "substitutes": 1232361
+    }
+  },
+  "totals": {
+    "anchors": 119643,
+    "distractors": 393412,
+    "eligible:clean_control": 48122,
+    "eligible:distractor_only": 24948,
+    "eligible:full_eviscope": 23453,
+    "eligible:substitute_only": 46504,
+    "questions": 48122,
+    "substitutes": 1823092
+  },
+  "v1_four_way_questions_preserved": 23453,
+  "v2_relaxed_questions_added": 24669
+}

@@ -1,0 +1,11 @@
+{
+  "construction": "full source rebuild with V1 thresholds; relaxed release eligibility",
+  "lineage_file": "audit/v2_source_lineage.jsonl",
+  "lineage_rows": 48122,
+  "source_dataset_root": "D:\\study\\TKGQA\\Eviscope_rebuild\\data\\Ori\\ICEWS",
+  "source_facts_modified": false,
+  "source_questions_modified": false,
+  "source_splits_inherited": true,
+  "status": "pass",
+  "v1_four_way_cohort_preserved": true
+}

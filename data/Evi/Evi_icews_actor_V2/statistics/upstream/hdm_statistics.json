@@ -1,0 +1,10 @@
+{
+  "level_counts": {
+    "complex": 8548,
+    "medium": 3572,
+    "simple": 11333
+  },
+  "mean_A_q": 0.474426,
+  "mean_C_q": 2.365582,
+  "mean_D_q": 3.414432
+}

@@ -1,0 +1,34 @@
+{
+  "anchors": 2513738,
+  "distractors": 22491076,
+  "eligible_by_mode": {
+    "clean": 327047,
+    "distractor_only": 326971,
+    "full": 23569,
+    "substitute_only": 23645
+  },
+  "excluded": 82953,
+  "exclusion_reasons": {
+    "anchor_minimality_failed": 2,
+    "executor_cannot_reproduce_answers": 72355,
+    "near_duplicate_or_cross_split_family": 1632,
+    "no_verified_evidence_role": 8964
+  },
+  "per_split": {
+    "dev": {
+      "excluded": 5338,
+      "retained": 24662
+    },
+    "test": {
+      "excluded": 5457,
+      "retained": 24543
+    },
+    "train": {
+      "excluded": 72158,
+      "retained": 277842
+    }
+  },
+  "retained": 327047,
+  "substitute_anchor_coverage_mean": 0.016869,
+  "substitutes": 208706
+}

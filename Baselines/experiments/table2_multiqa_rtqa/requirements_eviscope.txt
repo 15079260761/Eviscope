@@ -1,0 +1,3 @@
+# Install into the existing project virtual environment.  Do not install the
+# original RTQA requirements.txt: it replaces the working CUDA/PyTorch stack.
+FlagEmbedding>=1.3,<2

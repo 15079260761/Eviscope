@@ -1,0 +1,53 @@
+{
+  "cohorts": {
+    "clean_all": {
+      "dev": 9086,
+      "test": 7123,
+      "total": 48122,
+      "train": 31913
+    },
+    "distractor_effect": {
+      "dev": 4765,
+      "test": 3965,
+      "total": 24948,
+      "train": 16218
+    },
+    "four_way_common": {
+      "dev": 4493,
+      "test": 3735,
+      "total": 23453,
+      "train": 15225
+    },
+    "substitute_effect": {
+      "dev": 8793,
+      "test": 6876,
+      "total": 46504,
+      "train": 30835
+    }
+  },
+  "cross_split_normalized_question_surfaces": 0,
+  "cross_split_question_id_intersections": {
+    "dev_test": 0,
+    "train_dev": 0,
+    "train_test": 0
+  },
+  "public_private_boundary": {
+    "answer_type_is_schema_metadata_not_a_gold_answer": true,
+    "private_test_labels_present": true,
+    "public_private_test_id_alignment": "exact",
+    "public_question_forbidden_label_fields": 0,
+    "public_test_supervision_files": 0,
+    "status": "pass",
+    "test_materialization_requires_trusted_private_labels": true
+  },
+  "questions": 48122,
+  "release_version": "2.0.0",
+  "source_lineage_rows": 48122,
+  "splits": {
+    "dev": 9086,
+    "test": 7123,
+    "train": 31913
+  },
+  "status": "pass",
+  "v1_four_way_question_ids_preserved_exactly": true
+}

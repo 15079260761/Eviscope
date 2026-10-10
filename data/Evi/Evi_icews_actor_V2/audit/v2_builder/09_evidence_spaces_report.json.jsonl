@@ -1,0 +1,22 @@
+{
+  "allowed_fact_overlap_reported": {
+    "test_distractor_facts_total": 12094,
+    "test_substitute_facts_total": 11709
+  },
+  "excluded": 0,
+  "excluded_by_split": {
+    "dev": 0,
+    "test": 0,
+    "train": 0
+  },
+  "reported_train_test_anchor_distractor_overlaps": 3525,
+  "reported_train_test_anchor_substitute_overlaps": 14659,
+  "retained": 59037,
+  "retained_by_split": {
+    "dev": 11135,
+    "test": 8538,
+    "train": 39364
+  },
+  "test_anchor_fact_count": 999,
+  "train_role_labels_reconciled": 0
+}

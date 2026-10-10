@@ -1,0 +1,42 @@
+{
+  "allowed_nonzero_metrics": {
+    "test_anchor_facts_in_train_labels": 23767,
+    "test_distractor_facts_in_train_labels": 91786,
+    "test_substitute_facts_in_train_labels": 1305
+  },
+  "dataset": "cronquestions",
+  "encoder_revision": "1.0.0:dim=4096:corpus=0e9ee21bcecef907",
+  "hdm_boundaries": {
+    "b1": 1.0,
+    "b2": 2.0,
+    "boundary_version": "hdm_v1",
+    "fit_source": "train",
+    "n_train": 277842
+  },
+  "mandatory_checks": {
+    "paired_id_cross_split": 0,
+    "pool_descriptor_missing_ids": 0,
+    "question_surface_cross_split": 0,
+    "semantic_family_cross_split": 0
+  },
+  "notes": [
+    "split consistency, evidence validation, HDM and BS checks per sections 20/21/22; any non-zero mandatory item blocks release.",
+    "Entity/relation/time/fact overlap across splits is allowed and reported separately because the KG is shared read-only. Paired IDs, model-visible question surfaces and semantic families remain split-disjoint; every fitted parameter is Train-only."
+  ],
+  "status": "pass",
+  "thresholds": {
+    "bs_quantile": 0.5,
+    "bs_tau": 0.871848,
+    "distractor_min_quantile": 0.25,
+    "distractor_similarity_quantile": 0.25,
+    "fit_n_anchor_substitute_pairs": 200343,
+    "fit_n_candidates": 28367722,
+    "fit_n_valid_gated": 200343,
+    "fit_source": "train",
+    "seed": 20260923,
+    "substitute_quantile": 0.05,
+    "tau_eq": 0.573633,
+    "tau_min": 0.667949,
+    "tau_sim": 0.372947
+  }
+}
